@@ -165,7 +165,7 @@ void move_troll(int id) {
 }
 
 void move_player(int key) {
-    if (!(key == 'w' || key == 's' || key == 'a' || key == 'd'))
+    if (!(key == 'w' || key == 's' || key == 'a' || key == 'd') && !(key == 'i' || key == 'k' || key == 'j' || key == 'l'))
 		return;
 
     point place = {player.x, player.y};
@@ -261,6 +261,11 @@ void change_direction(int key) {
         case 's': direct = DOWN; return;
         case 'a': direct = LEFT; return;
         case 'd': direct = RIGHT; return;
+
+        case 'i': direct = UP; return;
+        case 'k': direct = DOWN; return;
+        case 'j': direct = LEFT; return;
+        case 'l': direct = RIGHT; return;
     }
 }
 

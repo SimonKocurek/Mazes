@@ -282,14 +282,11 @@ void clear_screen(void) {
 void set_colors(void) {
     start_color();
 
-    init_color(7, 1000, 1000, 1000);
-    init_color(15, 1000, 1000, 1000);
-    init_color(0, 89, 93, 101);
-    //init_color(4, 871, 738, 214);
-
-    init_pair(1, 0, 0);
-    init_pair(2, 6, 0);
-    init_pair(3, 9, 0);
-    init_pair(4, 14, 0);
+	// player 
+    init_pair(1, 10, 0);
+	// trolls
+    init_pair(2, 1, 0);
+	// portals
+    init_pair(3, 12, 0);
 }
 

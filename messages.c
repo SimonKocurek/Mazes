@@ -23,14 +23,18 @@ void offset_by_whitespace(const char* message) {
 
 void controls_message(void) {
     addch('\n');
-    offset_by_whitespace("q : quit | r : reset | wsad : movement");
+    offset_by_whitespace("q : quit | r : reset | wsad or ijkl : movement");
     
     addch('q' | A_BOLD | COLOR_PAIR(1)); printw("%s", " : quit | ");
     addch('r' | A_BOLD | COLOR_PAIR(1)); printw("%s", " : reset | ");
     addch('w' | A_BOLD | COLOR_PAIR(1));
     addch('s' | A_BOLD | COLOR_PAIR(1));
     addch('a' | A_BOLD | COLOR_PAIR(1));
-    addch('d' | A_BOLD | COLOR_PAIR(1)); printw("%s", " : movement");
+    addch('d' | A_BOLD | COLOR_PAIR(1)); printw("%s", " or ");
+    addch('i' | A_BOLD | COLOR_PAIR(1));
+    addch('j' | A_BOLD | COLOR_PAIR(1));
+    addch('k' | A_BOLD | COLOR_PAIR(1));
+    addch('l' | A_BOLD | COLOR_PAIR(1)); printw("%s", " : movement");
 }
 
 void win_message(void) {
